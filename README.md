@@ -4,7 +4,7 @@ Denobase is a database written in TypeScript for Deno.
 # Usage
 For this tutorial, we will use 'db' as the Database.         
 ```Typescript
-import { Database, Get } from "https://deno.land/x/mod.ts"
+import { Database, Get } from "https://deno.land/x/denobase@1.0.0/mod.ts"
 let db = new Database("dataStore")
 ```
 'Get' is the return type for '.get()' method.   
@@ -54,7 +54,7 @@ Use 'read' to read json data from the json file that is created using 'write'.
 #### Example
 main.ts     
 ```Typescript
-import { Database } from "https://deno.land/x/mod.ts"
+import { Database } from "https://deno.land/x/denobase@1.0.0/mod.ts"
 let db = new Database("denobase")
 db.set("color", "Red")
 db.write()
@@ -66,13 +66,13 @@ denobase.json
 ```    
 If you try to log all value in the database, it will return an empty object because it create a new Map.    
 ```Typescript
-import { Database } from "https://deno.land/x/mod.ts"
+import { Database } from "https://deno.land/x/denobase@1.0.0/mod.ts"
 let db = new Database("denobase")
 db.all() // {}
 ```
 If you use 'read'
 ```Typescript
-import { Database } from "https://deno.land/x/mod.ts"
+import { Database } from "https://deno.land/x/denobase@1.0.0/mod.ts"
 let db = new Database("denobase")
 await db.read()
 db.all() // { color: "Red" }
